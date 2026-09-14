@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #ffcc80;
+    padding: 1rem;
+    flex-shrink: 0;
+    text-align:center;
+}
+
+.footer {
+    background: #ffab91;
+    padding: 1rem;
+    flex-shrink: 0;
+    text-align:center;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 0;
+}
+
+
+.leftpanel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    min-height: 0;
+}
+
+.rightpanel {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+}
+
+.form, .listbox, .detailbox {
+    background: #ce93d8;
+    border: 1px solid #333;
+    padding: 1rem;
+    overflow: auto;
+    margin: auto;
+    width: 90%;
+    border-radius: 12px;
+}
+
+.form {
+    background: #ce93d8;
+    height: 45%;
+}
+
+.listbox {
+    background: #90caf9;
+    height: 45%;
+}
+
+.detailbox {
+    background: #a5d6a7;
+    height: 80%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.todolist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.todoitem {
+    background: #64b5f6;
+    padding: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Responsive: stack panels on mobile */
+@media (max-width: 700px) {
+    html, body {
+    overflow: auto;
+    }
+
+    .main {
+    flex-direction: column;
+    }
+}
