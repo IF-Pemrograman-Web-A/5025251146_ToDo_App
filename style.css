@@ -37,18 +37,11 @@ body {
 }
 
 
-.leftpanel {
+.editor {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    min-height: 0;
-}
-
-.rightpanel {
-    flex: 1;
-    display: flex;
-    min-height: 0;
+    height: 400px;
+    width: 600px;
 }
 
 .form, .listbox, .detailbox {
@@ -68,13 +61,10 @@ body {
 
 .listbox {
     background: #90caf9;
-    height: 45%;
+    height: 400px;
+    width: 500px;
 }
 
-.detailbox {
-    background: #a5d6a7;
-    height: 80%;
-}
 
 .form form {
     display: flex;
@@ -94,7 +84,6 @@ body {
     margin-bottom: 0.4rem;
 }
 
-/* Responsive: stack panels on mobile */
 @media (max-width: 700px) {
     html, body {
     overflow: auto;
