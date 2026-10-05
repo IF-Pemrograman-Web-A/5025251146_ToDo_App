@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geb- To Do List</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <h1>To Do List</h1>
-    </header>
+  <div id="alert" class="alert" role="status" aria-live="polite">Yay!</div>
 
-    <main class="main">
-        <div class="listbox">
-            <h2>Todo List</h2>
-                <ul class="todolist">
-                <li class="todoitem">Belajar</li>
-                <li class="todoitem">Belajar</li>
-                <li class="todoitem">Kerja</li>
-                <li class="todoitem">Belajar</li>
-                </ul>
-        </div>
-        <div class="editor">
-            <section class="form">
-                <h2>Add To Do</h2>
-                <form>
-                    <label>Title <input type="text"></label>
-                    <label>Category <input type="text"></label>
-                    <label>Due Date <input type="date"></label>
-                    <label>Notes <textarea rows="2"></textarea></label>
-                    <button type="submit">Add Todo</button>
-                </form>
-            </section>
-        </div>
-        
-    </main>
-    <footer class="footer">
-        <p>Febrian Ananda Tjahjono - 5025251146 </p>
-    </footer>
+  <header class="banner">
+    <aside class="aside">
+      <button id="theme-toggle" class="toggle" type="button" aria-pressed="false">Dark mode</button>
+    </aside>
+    <h1>Todo</h1>
+  </header>
+
+  <main class="panels">
+    <section class="panel list-panel" aria-label="Todo list">
+      <h2>Your todos</h2>
+      <ul id="todo-list" class="todo-list"></ul>
+      <p id="empty" class="empty" hidden>Add a todo.</p>
+    </section>
+
+    <section class="panel form-panel" aria-label="Add todo">
+      <h2>Add todo</h2>
+      <form id="todo-form" novalidate>
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="deadline">Deadline</label>
+        <input id="deadline" name="deadline" type="date">
+
+        <p id="error" class="error" hidden>Enter a title.</p>
+        <button type="submit" class="add-btn">Add todo</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="banner">
+    <h1>Febrian Ananda Tjahjono
+      NRP: 5025251146
+    </h1>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
