@@ -1,0 +1,13 @@
+The above code is the current work for a web programming assignment. can you add these things to them? Do it in a way that doesnt change the overall structure of the code, still use camelcase and doesnt contain any comments. Explain which part of the code you add that corresponds to these requirements. You can ask if theres any confusion in my requirements
+
+Can you add these improvements:
+
+    - Make the todos disappear after being checked marked
+    - Make the todo editable by adding an edit toggle. The toggle allows the user to edit each of the description, title and due date.
+    - The createTodo function must be updated to include and wire up the edit and delete buttons, ensuring they work correctly with the associated Todo data.
+    - Add in an ID to each of the todo object and make the editing, finishing action update that todo object directly through ID selection
+    - All functions that modify a Todo (complete, edit, delete) must first find the corresponding object in the defaultTodos array by its ID (which is currently missing) and update that object before updating the DOM.
+    - Open an IndexedDB database with an object store for Todos, write each change to it, and load the saved Todos when the page opens. This is done so that when the page resets the data does not reset
+    - Save the light/dark mode preference in localstorage. Write the choice to localStorage when the button is pressed, and apply it again when the page loads.
+    - Add a camera preview with a "Take photo" button that uses navigator.mediaDevices.getUserMedia(), draw the frame to a <canvas>, and save the image with the Todo.
+    - The form has no notification time input, and there is no service worker file or navigator.serviceWorker.register() call. Add an <input type="datetime-local">, register a service worker, request the notification permission from a user action, and show the reminder with registration.showNotification().

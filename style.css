@@ -26,6 +26,8 @@
 
 * { box-sizing: border-box; }
 
+[hidden] { display: none !important; }
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -56,6 +58,8 @@ body {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .toggle {
@@ -138,7 +142,7 @@ body {
 form { display: grid; gap: 0.4rem; }
 label { font-weight: bold; margin-top: 0.4rem; }
 
-input[type="text"], input[type="date"], textarea {
+input[type="text"], input[type="date"], input[type="datetime-local"], textarea {
   width: 100%;
   font: inherit;
   padding: 0.5rem;
@@ -188,3 +192,23 @@ input[type="text"], input[type="date"], textarea {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+.todo-actions { display: flex; align-items: center; gap: 0.4rem; }
+
+.small-btn {
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--desc-bg);
+  color: var(--desc-text);
+  border: 2px solid var(--border);
+  cursor: pointer;
+}
+
+.todo-title input[type="text"] { flex: 1; min-width: 0; }
+.todo-desc textarea, .todo-desc input[type="date"] { margin-top: 0.4rem; }
+
+.todo-photo { display: block; max-width: 100%; margin-top: 0.5rem; border: 2px solid var(--border); }
+
+.camera { display: grid; gap: 0.4rem; margin-top: 0.4rem; }
+.camera video, .camera canvas { width: 100%; border: 2px solid var(--border); }
