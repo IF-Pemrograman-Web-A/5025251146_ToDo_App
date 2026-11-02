@@ -11,6 +11,7 @@
 
   <header class="banner">
     <aside class="aside">
+      <button id="notify-permission" class="toggle" type="button">Enable notifications</button>
       <button id="theme-toggle" class="toggle" type="button" aria-pressed="false">Dark mode</button>
     </aside>
     <h1>Todo</h1>
@@ -34,6 +35,17 @@
 
         <label for="deadline">Deadline</label>
         <input id="deadline" name="deadline" type="date">
+
+        <label for="notify-at">Notification time</label>
+        <input id="notify-at" name="notifyAt" type="datetime-local">
+
+        <label>Photo</label>
+        <div class="camera">
+          <button id="start-camera" class="small-btn" type="button">Start camera</button>
+          <video id="camera-preview" autoplay playsinline muted hidden></video>
+          <button id="take-photo" class="small-btn" type="button" hidden>Take photo</button>
+          <canvas id="photo-canvas" hidden></canvas>
+        </div>
 
         <p id="error" class="error" hidden>Enter a title.</p>
         <button type="submit" class="add-btn">Add todo</button>
